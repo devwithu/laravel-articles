@@ -12,16 +12,18 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        
+        <link rel="stylesheet" href="css/app.css">
+
     </head>
     <body>
-    <div id="app">
-    <div class="container">
-        <articles></articles>
-    </div>
-    
-    </div>
+        <div id="app">
+            <navbar></navbar>
+            <div class="container">
+                <articles></articles>
+            </div>
+            
+        </div>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

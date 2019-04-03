@@ -1,21 +1,42 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
+    <div>
+        <h2>Articles</h2>
+        <div class="card card-body mb-2" v-for="article in articles" v-bind:key="article_id">
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.body }}</p>
         </div>
+
     </div>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                articles: [],
+                article: {
+                    id: '',
+                    title: '',
+                    body: '',
+                },
+                article_id: '',
+                pagination: {},
+                edit: false
+            }
+        },
+        created() {
+            this.fetchArticles();
+        },
+        methods: {
+            fetchArticles() {
+                fetch('api/articles')
+                .then(res => res.json())
+                .then(res => {
+                    //console.log(res.data);
+                    this.articles = res.data;
+                })
+            }
+        },
         mounted() {
             console.log('Component mounted.')
         }
