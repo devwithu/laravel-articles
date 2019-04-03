@@ -37103,7 +37103,7 @@ var render = function() {
       _vm._l(_vm.articles, function(article) {
         return _c(
           "div",
-          { key: _vm.article_id, staticClass: "card card-body mb-2" },
+          { key: article.id, staticClass: "card card-body mb-2" },
           [
             _c("h3", [_vm._v(_vm._s(article.title))]),
             _vm._v(" "),

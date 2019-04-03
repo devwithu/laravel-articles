@@ -21,7 +21,7 @@
             <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><a class="page-link" href="#" @click="fetchArticles(pagination.next_page_url)" >Next</a></li>
         </ul>
         </nav>        
-        <div class="card card-body mb-2" v-for="article in articles" v-bind:key="article_id">
+        <div class="card card-body mb-2" v-for="article in articles" v-bind:key="article.id">
             <h3>{{ article.title }}</h3>
             <p>{{ article.body }}</p>
             <hr>
