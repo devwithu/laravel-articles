@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "2308002f-90f8-4a3a-93ee-4a3f5f6f75ed",
+		"name": "larticles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost.test/api/articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost.test/api/articles",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"test"
+					],
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost.test/api/article/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost.test/api/article/3",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"test"
+					],
+					"path": [
+						"api",
+						"article",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost.test/api/article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Test Title\",\n\t\"body\":\"Test Body\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost.test/api/article",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"test"
+					],
+					"path": [
+						"api",
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost.test/api/article",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"article_id\":5,\n\t\"title\":\"Updated title\",\n\t\"body\":\"Updated Body\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost.test/api/article",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"test"
+					],
+					"path": [
+						"api",
+						"article"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
